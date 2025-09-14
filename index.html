@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Kamu</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+        text-align: center;
+    }
+    .container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+    }
+    h1 {
+        color: #d9534f;
+        margin-bottom: 20px;
+    }
+    p {
+        color: #555;
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        gap: 20px;
+        position: relative;
+        height: 50px; /* Jaga tinggi agar tombol tidak loncat */
+    }
+    .yes-button, .no-button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        position: absolute;
+    }
+    .yes-button {
+        background-color: #5cb85c;
+        color: white;
+        z-index: 2; /* Pastikan tombol "Ya" selalu di depan */
+        left: 20%;
+    }
+    .yes-button:hover {
+        transform: scale(1.05);
+    }
+    .no-button {
+        background-color: #f0ad4e;
+        color: white;
+        z-index: 1; /* Biarkan tombol "Tidak" di belakang tombol "Ya" */
+        left: 60%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>biii pliss sorry</h1>
+  <p>
+    knpki blokirka, nda capekki denial? kutauji tkutki luluh,
+    heyyy kitaji biasa ajarka, nd bolehki baku tantang ego,
+    knp hruski sling mnyakiti bgini?
+    /
+  </p>
+  <p>
+    ayo perbaiki lagi, blajar lg iwi ta, yaa?
+  </p>
+  <div class="button-container">
+    <button class="yes-button" onclick="handleYes()">maafkan iwi!</button>
+    <button id="no-btn" class="no-button" onmouseover="moveButton()">Tidak</button>
+  </div>
+</div>
+
+<script>
+  const noButton = document.getElementById('no-btn');
+  let currentPosition = 0; // 0 = kanan, 1 = kiri
+
+  function moveButton() {
+      if (currentPosition === 0) {
+          noButton.style.left = '20%'; // Pindah ke kiri
+          currentPosition = 1;
+      } else {
+          noButton.style.left = '60%'; // Pindah ke kanan
+          currentPosition = 0;
+      }
+  }
+
+  function handleYes() {
+      alert('di tekan mi iya, hruski komitmen sbgai laki" bii makasii, janjika lbih baik lg sygiki,skrang buka blokku dan chtka bias kutau,❤️');
+      window.location.href = 'https://www.google.com'; // Ganti dengan link lain jika perlu
+  }
+</script>
+
+</body>
+</html>
